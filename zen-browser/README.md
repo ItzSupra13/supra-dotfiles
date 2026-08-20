@@ -1,0 +1,1 @@
+Default Zoom - 90%
