@@ -1,0 +1,86 @@
+configuration {
+    modi: "drun";
+    font: "sans-serif 12";
+    show-icons: true;
+    display-drun: "";
+    drun-display-format: "{name}";
+}
+
+@theme "/dev/null"
+
+* {
+    bg: #050505;       /* Deepest shadow black */
+    bg-alt: #121212;   /* Slightly elevated dark gray for inputs/selection */
+    fg: #e0e0e0;       /* Crisp off-white for active text */
+    fg-alt: #6b6b6b;   /* Ash gray for inactive elements and placeholders */
+    accent: #ffb703;   /* Deep, warm flame yellow */
+    
+    background-color: @bg;
+    text-color: @fg;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    border-radius: 13px;
+}
+
+  
+window {
+    width: 30%;
+    border: 1px solid;
+    border-color: @bg-alt;
+    background-color: @bg;
+    padding: 20px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg-alt;
+    padding: 12px;
+    margin: 0px 0px 20px 0px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent;
+    font: "sans-serif bold 12";
+    padding: 0px 15px 0px 5px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    lines: 6;
+    columns: 1;
+    fixed-height: true;
+    background-color: transparent;
+}
+
+element {
+    padding: 10px 15px;
+    background-color: transparent;
+    text-color: @fg-alt;
+}
+
+element-icon {
+    size: 20px;
+    margin: 0px 15px 0px 0px;
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+/* Minimalist selection highlight */
+element selected {
+    background-color: @bg-alt;
+    text-color: @accent;
+}

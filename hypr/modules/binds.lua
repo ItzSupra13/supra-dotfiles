@@ -14,10 +14,12 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("wlogout"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("rofi -show drun"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -36,6 +38,19 @@ end
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+
+-- Maximise and Minimize functionality
+
+hl.bind("SUPER + M", hl.dsp.window.fullscreen("maximized", "togg>
+hl.bind("SUPER + N", function ()
+    if hl.get_workspace("special:minimized") then
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_acti>
+        hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:min>
+    else
+        hl.dispatch(hl.dsp.window.tag({ tag = "minimized", windo>
+        hl.dispatch(hl.dsp.window.move({ workspace = "special:mi>
+    end
+end)
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
