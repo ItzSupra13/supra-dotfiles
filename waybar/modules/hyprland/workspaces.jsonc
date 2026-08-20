@@ -1,0 +1,18 @@
+{
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"on-click": "activate",
+		"format": "{name}",
+		"persistent-workspaces": {
+			"*": 5
+		},
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5"
+		}
+	}
+}

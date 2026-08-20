@@ -1,0 +1,30 @@
+{
+	"mpris": {
+
+		"justify": "center",
+
+		"rotate": 90,
+
+		"format": "{player_icon} {title} - {artist}",
+
+		"format-paused": "<span color='grey'>{status_icon}</span>",
+
+		"max-length": 100,
+
+		"player-icons": {
+			"default": "⏸",
+			"mpv": "🎵"
+		},
+
+		"status-icons": {
+			"paused": "󰝛"
+		},
+
+		"ignored-players": [
+			"brave"
+		],
+
+		"tooltip-format": "Playing: {title} - {artist}",
+		"tooltip-format-paused": "Paused: {title} - {artist}"
+	}
+}
