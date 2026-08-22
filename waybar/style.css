@@ -1,6 +1,5 @@
-@define-color background #0d0a09;
-@define-color foreground #efcca1;
-
+@define-color background #0D0D0D;
+@define-color foreground #F1AA76;
 * {
   /* background-color: @background; */
   /* color: @foreground; */
@@ -125,10 +124,12 @@ window#waybar {
 #clock.t {
   margin-bottom: 7px;
   font-size: medium;
+  color: @foreground;
 }
 
 #clock.d {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  font-size: 8px;
 }
 
 #custom-screenrecording-indicator,

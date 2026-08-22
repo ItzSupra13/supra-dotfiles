@@ -68,3 +68,9 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.layer_rule({
+  match        = { namespace = "rofi" },
+  blur         = true,
+  ignore_alpha = 0.5,
+})
