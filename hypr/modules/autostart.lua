@@ -6,8 +6,10 @@
 
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
---
--- hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+
+hl.on("hyprland.start", function () 
+   hl.exec_cmd("waybar")
+   hl.exec_cmd("hyprpaper")
+   hl.exec_cmd("/usr/bin/gnome-keyring-daemon --start --components=secrets") -- idk what this does honestly
+   hl.exec_cmd("lua5.1 /home/supra13/.config/hypr/scripts/obsidian_widget.lua")
+end)

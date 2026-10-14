@@ -11,15 +11,15 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 10";
-    background:      #0D0906;
-    background-alt:  #17130F;
-    foreground:      #C7BFB2;
-    accent:          #C9A489;
-    selected:        #D6C7B0;
-    active:          #3E3B3E;
-    urgent:          #8C5A4A;
-    border-color:                transparent;
+    font:                       "JetBrains Mono Nerd Font 10";
+    background:                 #0D0906BB;
+    background-alt:             #17130FBB;
+    foreground:                 #C7BFB2;
+    accent:                     #C9A489;
+    selected:                   #D6C7B0;
+    active:                     #3E3B3E;
+    urgent:                     #8C5A4A;
+    border-color:               #C9A489;
 }
 
 /*****----- Main Window -----*****/
@@ -50,8 +50,8 @@ mainbox {
 }
 
 listbox {
-    spacing:                     15px;
-    padding:                     15px;
+    spacing:                     16px;
+    padding:                     8px;
     border:                      0px;
     background-color:            transparent;
     orientation:                 vertical;
@@ -130,7 +130,7 @@ element {
     spacing:                     10px;
     padding:                     10px;
     border:                      0px;
-    border-radius:               14px;
+    border-radius:               6px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -150,9 +150,6 @@ element normal.active {
     text-color:                  @foreground;
 }
 
-/* THE FIX: alternate rows (even) — without these, rofi falls back to its
-   built-in default theme's alternate-row colors, which is the "weird accent
-   on every second option" bug. Force them to match the normal rows. */
 element alternate.normal {
     background-color:            transparent;
     text-color:                  @foreground;

@@ -1,27 +1,108 @@
-sort=-time
-layer=overlay
-background-color=#2e3440
-width=300
-height=110
-border-size=2
-border-color=#88c0d0
-border-radius=15
-icons=0
-max-icon-size=64
+# [ BEHAVIOUR ]
+max-history=5
+markup=1
+actions=1
+history=1
 default-timeout=5000
-ignore-timeout=1
-font=monospace 14
+ignore-timeout=0
+sort=+time
+max-visible=5
+layer=overlay
+anchor=top-right
 
-[urgency=low]
-border-color=#cccccc
+# [ BINDINGS ]
+on-button-left=invoke-default-action
+on-button-middle=dismiss-group
+on-button-right=dismiss
+on-touch=invoke-default-action
 
-[urgency=normal]
-border-color=#d08770
+# [ STYLE ]
+font=sans-serif 11
+background-color=#0d0d0d
+text-color=#ffffff
+progress-color=over #F1AA7655
 
-[urgency=high]
-border-color=#bf616a
+width=340
+height=240
+margin=10
+outer-margin=10,10,0,0
+padding=16,20
+
+border-size=1
+border-color=#F1AA7655
+border-radius=6
+
+icons=1
+max-icon-size=48
+icon-location=left
+
+# Title styled like "Today's Tasks": Playfair, bold, accent
+format=<span font_family="Playfair Display" weight="bold" size="large" color="#F1AA76">%s</span>\n%b
+text-alignment=left
+
+# [ CRITICAL ]
+[urgency=critical]
+border-color=#F1AA76
+border-size=2
 default-timeout=0
 
-[category=mpd]
-default-timeout=2000
-group-by=category
+# [ OSD POPUPS ]
+[app-name=Volume]
+anchor=bottom-center
+outer-margin=0,0,30,0
+text-alignment=center
+width=220
+height=60
+padding=10,16
+ignore-timeout=1
+default-timeout=1000
+progress-color=over #F1AA7666
+format=<span color="#F1AA76" weight="bold">%s</span>
+
+[app-name="Volume Mute"]
+anchor=bottom-center
+outer-margin=0,0,30,0
+text-alignment=center
+width=220
+height=60
+padding=10,16
+ignore-timeout=1
+default-timeout=1000
+border-color=#F38BA899
+progress-color=over #F38BA866
+format=<span color="#F38BA8" weight="bold">%s</span>
+
+[app-name=Microphone]
+anchor=bottom-center
+outer-margin=0,0,30,0
+text-alignment=center
+width=220
+height=60
+padding=10,16
+ignore-timeout=1
+default-timeout=1000
+progress-color=over #F1AA7666
+format=<span color="#F1AA76" weight="bold">%s</span>
+
+[app-name=Brightness]
+anchor=bottom-center
+outer-margin=0,0,30,0
+text-alignment=center
+width=220
+height=60
+padding=10,16
+ignore-timeout=1
+default-timeout=1000
+progress-color=over #F1AA7666
+format=<span color="#F1AA76" weight="bold">%s</span>
+
+# [ MEDIA ]
+[app-name="spotify-player"]
+max-icon-size=128
+
+[app-name="Music Player"]
+text-alignment=center
+ignore-timeout=1
+
+[hidden=true]
+invisible=1

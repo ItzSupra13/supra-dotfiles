@@ -1,0 +1,1 @@
+Make Zathura Defualt: xdg-mime default org.pwmt.zathura.desktop application/pdf
